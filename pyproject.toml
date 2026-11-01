@@ -1,0 +1,35 @@
+[project]
+name = "ai-engineering-lab"
+version = "0.1.0"
+description = "Reproduzierbares Python-Lab für ML-Grundlagen: Referenzvorhersage vs. lineare Regression."
+authors = [
+    { name = "Sebastian Schult", email = "schult.sebastian@googlemail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+lab = "lab.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2",
+    "ruff>=0.17",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.32,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "lab"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

@@ -35,7 +35,16 @@ Lern-Lab. Sebastian will jedes Ergebnis selbst verstehen und erklären. Geschwin
 
 ## Prüfkommandos
 
-Werden mit LAB-01 verbindlich eingetragen, sobald Projektstruktur und Toolchain stehen.
+Vor jedem Commit lokal ausführen; dieselben Schritte laufen in der CI (`.github/workflows/ci.yml`):
+
+```bash
+uv sync --locked
+uv run ruff check
+uv run ruff format --check
+uv run pytest
+```
+
+Tests brauchen keinen Netzwerkzugriff. Neue Tests nutzen Fixtures statt echter Downloads.
 
 ## Agent skills
 
