@@ -2,7 +2,16 @@
 
 Ein schlankes, reproduzierbares Python-Lab, in dem ich ML-Experimente selbst ausführe, vergleiche und erkläre. Phase 0 meines Lernpfads zu AI Product Engineering.
 
-**Status:** Planung abgeschlossen, Umsetzung startet mit LAB-01. Noch kein lauffähiger Code.
+**Status:** Projektgerüst steht (LAB-01). Die Schritte selbst folgen ab LAB-02.
+
+## Start
+
+Voraussetzung: [uv](https://docs.astral.sh/uv/). Python 3.13 wird von uv bei Bedarf installiert.
+
+```bash
+uv sync
+uv run lab --help
+```
 
 ## Worum es geht
 
